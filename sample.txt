@@ -1,1 +1,4 @@
-test file added
+The terminal output reveals great news: your repository configuration is actually completely clean and correct (origin is set up properly, and the duplicate remote was just a UI glitch from Git Graph's cache).The underlying issue is that VS Code currently has the parent folder (Fabric_Git) open as the workspace root, while your actual Git repository (.git folder and commits) lives one level deeper inside Fabric_git-practice. Because Git Graph looks at the root of the workspace, it checks Fabric_Git (which has no git repository directly inside it) and fails.  
+
+
+ How to Fix It PermanentlyTo make VS Code and Git Graph point to the right place:In VS Code, click on File $\rightarrow$ Open Folder... (or press Ctrl + K, then Ctrl + O).Navigate to D:\Fabric_Git and select the Fabric_git-practice folder.   Click Select Folder to open it.
